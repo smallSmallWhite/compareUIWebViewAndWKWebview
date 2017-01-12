@@ -38,6 +38,7 @@
     WKWebView *webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.taobao.com"]]];
     webView.navigationDelegate = self;
+    NSLog(@"%f",webView.estimatedProgress);
     [self.view addSubview:webView];
 }
 #pragma mark  WKWebView的代理方法
